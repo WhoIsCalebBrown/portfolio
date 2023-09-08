@@ -14,6 +14,51 @@
                     </Link>
                 </div>
             </div>
+            <div class="relative overflow-x-auto">
+                <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            ID
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Name
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Skill
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Image
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="project in projects.data"
+                        :key="project.id"
+                        class="bg-white border-b"
+                    >
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                            {{ project.id }}
+                        </th>
+                        <td class="px-6 py-4">
+                            {{ project.name }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ project.skill.name }}
+                        </td>
+                        <td class="px-6 py-4">
+                            <img :src="project.image" class="w-12 h-12 rounded-full"/>
+                        </td>
+                        <td class="px-6 py-4">
+                            Edit/Delete
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </AuthenticatedLayout>
 </template>
@@ -22,4 +67,8 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import {Head, Link} from '@inertiajs/vue3';
+
+defineProps({
+    projects: Object
+});
 </script>
