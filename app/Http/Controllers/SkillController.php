@@ -29,7 +29,7 @@ class SkillController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created resource in storage
      */
     public function store(Request $request): \Illuminate\Http\RedirectResponse
     {
