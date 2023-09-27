@@ -1,130 +1,99 @@
 <template>
-    <section
-        id="home"
-        class="lg:h-[85vh] flex items-center bg-light-primary dark:bg-dark-primary py-32 lg:py-0 overflow-hidden"
-    >
-        <div
-            class="container mx-auto h-full"
-            v-if="visible"
-            :style="{
-                opacity: initial.opacity,
-                transform: `translateY(${initial.y}px)`,
-            }"
-            @after-enter="visible = true"
-        >
-            <div class="flex flex-col md:flex-row items-center h-full pt-8">
-                <div class="flex-1 flex flex-col items-center lg:items-start">
-                    <p class="text-lg text-accent text-md mb-[22px]">
-                        Hey, I'm Caleb! 👋
-                    </p>
-                    <h1
-                        class="text-4xl leading-[44px] md:text-5xl md:leading-tight lg:text-7xl lg:leading-[1.2] font-bold md:tracking-[-2px]"
-                    >
-                        I Build & Design <br />
-                        Web Interfaces.
-                    </h1>
-                    <p
-                        class="pt-4 pb-8 md:pt-6 md:pb-12 max-w-[480px] text-lg text-center lg:text-left"
-                    >
-                        Passionate about fitness, finance, software development,
-                        and mountain hiking.
-                    </p>
-                    <button
-                        class="btn btn-md bg-accent hover:bg-light-secondary hover:text-light-tail-500 dark:hover:bg-light-secondary dark:hover:text-dark-navy-100 md:btn-lg transition-all"
-                    >
-                        Work with me
-                    </button>
-                    <div class="pt-12">
-                        <h5
-                            class="text-lg flex justify-center lg:justify-start items-center text-black dark:text-white mb-2"
-                        >
-                            Follow me on
-                        </h5>
-                        <div class="flex items-center mb-6">
-                            <a
-                                class="w-12 h-12 rounded-full flex items-center justify-center border border-white text-black dark:text-white hover:bg-light-secondary hover:border-light-secondary dark:hover:bg-dark-secondary dark:hover:border-dark-secondary mr-3 sm:mr-4"
-                                href="https://facebook.com/laraveller"
-                            >
-                                <svg
-                                    width="8"
-                                    height="16"
-                                    viewBox="0 0 8 16"
-                                    class="fill-current"
-                                >
-                                    <path
-                                        d="M7.43902 6.4H6.19918H5.75639V5.88387V4.28387V3.76774H6.19918H7.12906C7.3726 3.76774 7.57186 3.56129 7.57186 3.25161V0.516129C7.57186 0.232258 7.39474 0 7.12906 0H5.51285C3.76379 0 2.54609 1.44516 2.54609 3.5871V5.83226V6.34839H2.10329H0.597778C0.287819 6.34839 0 6.63226 0 7.04516V8.90323C0 9.26452 0.243539 9.6 0.597778 9.6H2.05902H2.50181V10.1161V15.3032C2.50181 15.6645 2.74535 16 3.09959 16H5.18075C5.31359 16 5.42429 15.9226 5.51285 15.8194C5.60141 15.7161 5.66783 15.5355 5.66783 15.3806V10.1419V9.62581H6.13276H7.12906C7.41688 9.62581 7.63828 9.41935 7.68256 9.10968V9.08387V9.05806L7.99252 7.27742C8.01466 7.09677 7.99252 6.89032 7.85968 6.68387C7.8154 6.55484 7.61614 6.42581 7.43902 6.4Z"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                class="w-12 h-12 rounded-full flex items-center justify-center border border-white text-black dark:text-white hover:bg-light-secondary hover:border-light-secondary dark:hover:bg-dark-secondary dark:hover:border-dark-secondary mr-3 sm:mr-4"
-                                href="https://facebook.com/laraveller"
-                            >
-                                <svg
-                                    width="16"
-                                    height="12"
-                                    viewBox="0 0 16 12"
-                                    class="fill-current"
-                                >
-                                    <path
-                                        d="M14.2194 2.06654L15.2 0.939335C15.4839 0.634051 15.5613 0.399217 15.5871 0.2818C14.8129 0.704501 14.0903 0.845401 13.6258 0.845401H13.4452L13.3419 0.751468C12.7226 0.258317 11.9484 0 11.1226 0C9.31613 0 7.89677 1.36204 7.89677 2.93542C7.89677 3.02935 7.89677 3.17025 7.92258 3.26419L8 3.73386L7.45806 3.71037C4.15484 3.61644 1.44516 1.03327 1.00645 0.587084C0.283871 1.76125 0.696774 2.88845 1.13548 3.59296L2.0129 4.90802L0.619355 4.20352C0.645161 5.18982 1.05806 5.96477 1.85806 6.52838L2.55484 6.99804L1.85806 7.25636C2.29677 8.45401 3.27742 8.94716 4 9.13503L4.95484 9.36986L4.05161 9.93346C2.60645 10.8728 0.8 10.8024 0 10.7319C1.62581 11.7652 3.56129 12 4.90323 12C5.90968 12 6.65806 11.9061 6.83871 11.8356C14.0645 10.2857 14.4 4.41487 14.4 3.2407V3.07632L14.5548 2.98239C15.4323 2.23092 15.7935 1.8317 16 1.59687C15.9226 1.62035 15.8194 1.66732 15.7161 1.6908L14.2194 2.06654Z"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                class="w-12 h-12 rounded-full flex items-center justify-center border border-white text-black dark:text-white hover:bg-light-secondary hover:border-light-secondary dark:hover:bg-dark-secondary dark:hover:border-dark-secondary mr-3 sm:mr-4"
-                                href="https://facebook.com/laraveller"
-                            >
-                                <svg
-                                    width="16"
-                                    height="12"
-                                    viewBox="0 0 16 12"
-                                    class="fill-current"
-                                >
-                                    <path
-                                        d="M15.6645 1.88018C15.4839 1.13364 14.9419 0.552995 14.2452 0.359447C13.0065 6.59222e-08 8 0 8 0C8 0 2.99355 6.59222e-08 1.75484 0.359447C1.05806 0.552995 0.516129 1.13364 0.335484 1.88018C0 3.23502 0 6 0 6C0 6 0 8.79263 0.335484 10.1198C0.516129 10.8664 1.05806 11.447 1.75484 11.6406C2.99355 12 8 12 8 12C8 12 13.0065 12 14.2452 11.6406C14.9419 11.447 15.4839 10.8664 15.6645 10.1198C16 8.79263 16 6 16 6C16 6 16 3.23502 15.6645 1.88018ZM6.4 8.57143V3.42857L10.5548 6L6.4 8.57143Z"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                class="w-12 h-12 rounded-full flex items-center justify-center border border-white text-black dark:text-white hover:bg-light-secondary hover:border-light-secondary dark:hover:bg-dark-secondary dark:hover:border-dark-secondary mr-3 sm:mr-4"
-                                href="https://facebook.com/laraveller"
-                            >
-                                <svg
-                                    width="14"
-                                    height="14"
-                                    viewBox="0 0 14 14"
-                                    class="fill-current"
-                                >
-                                    <path
-                                        d="M13.0214 0H1.02084C0.453707 0 0 0.451613 0 1.01613V12.9839C0 13.5258 0.453707 14 1.02084 14H12.976C13.5432 14 13.9969 13.5484 13.9969 12.9839V0.993548C14.0422 0.451613 13.5885 0 13.0214 0ZM4.15142 11.9H2.08705V5.23871H4.15142V11.9ZM3.10789 4.3129C2.42733 4.3129 1.90557 3.77097 1.90557 3.11613C1.90557 2.46129 2.45002 1.91935 3.10789 1.91935C3.76577 1.91935 4.31022 2.46129 4.31022 3.11613C4.31022 3.77097 3.81114 4.3129 3.10789 4.3129ZM11.9779 11.9H9.9135V8.67097C9.9135 7.90323 9.89082 6.8871 8.82461 6.8871C7.73571 6.8871 7.57691 7.74516 7.57691 8.60323V11.9H5.51254V5.23871H7.53154V6.16452H7.55423C7.84914 5.62258 8.50701 5.08065 9.52785 5.08065C11.6376 5.08065 12.0232 6.43548 12.0232 8.2871V11.9H11.9779Z"
-                                    />
-                                </svg>
-                            </a>
+    <div class="bg-dark-secondary">
+        <header class="absolute inset-x-0 top-0 z-50">
+            <div class="mx-auto max-w-7xl">
+                <div class="px-6 pt-6 lg:max-w-2xl lg:pl-8 lg:pr-0">
+                    <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
+                        <a href="#" class="-m-1.5 p-1.5 flex items-center">
+                            <span class="sr-only">Caleb Brown</span>
+                            <img alt="Your Company" class="h-8 w-auto" src="Images/Logo.svg" />
+                            <div class="pl-2 text-xl font-semibold text-white">
+                                Caleb Brown
+                            </div>
+                        </a>
+                        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
+                            <span class="sr-only">Open main menu</span>
+                            <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+                        </button>
+                        <div class="hidden lg:ml-12 lg:flex lg:gap-x-14">
+                            <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm font-semibold leading-6 text-white">{{ item.name }}</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
+                <div class="fixed inset-0 z-50" />
+                <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-dark-secondary px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div class="flex items-center justify-between">
+                        <a href="#" class="-m-1.5 p-1.5">
+                            <span class="sr-only">Your Company</span>
+                            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+                        </a>
+                        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
+                            <span class="sr-only">Close menu</span>
+                            <XMarkIcon class="h-6 w-6" aria-hidden="true" />
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-gray-500/10">
+                            <div class="space-y-2 py-6">
+                                <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50">{{ item.name }}</a>
+                            </div>
+                            <div class="py-6">
+                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50">Log in</a>
+                            </div>
+                        </div>
+                    </div>
+                </DialogPanel>
+            </Dialog>
+        </header>
+
+        <div class="relative">
+            <div class="mx-auto max-w-7xl">
+                <div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
+                    <svg class="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-dark-secondary lg:block" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                        <polygon points="0,0 90,0 50,100 0,100" />
+                    </svg>
+
+                    <div class="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
+                        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+                            <div class="hidden sm:mb-10 sm:flex">
+                                <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-white ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                                    Anim aute id magna aliqua ad ad non deserunt sunt. <a href="#" class="whitespace-nowrap font-semibold text-accent"><span class="absolute inset-0" aria-hidden="true" />Read more <span aria-hidden="true">&rarr;</span></a>
+                                </div>
+                            </div>
+                            <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">I Build & Design <br />
+                                Web Interfaces.</h1>
+                            <p class="mt-6 text-lg leading-8 text-white">
+                                Passionate about fitness, finance, software development,
+                                and mountain hiking.
+                            </p>
+                            <div class="mt-10 flex items-center gap-x-6">
+                                <a href="#" class="rounded-md bg-accent px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">My Work</a>
+                                <a href="#" class="text-sm font-semibold leading-6 text-accent">About Me<span aria-hidden="true">→</span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div
-                    class="flex flex-1 justify-end items-center h-full mt-8 md:mt-0"
-                >
-                    <img
-                        class="rounded-lg"
-                        src="../../../assets/Me.jpg"
-                        alt="Hero"
-                    />
-                </div>
+            </div>
+            <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+                <img class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full" src="Images/Me.jpg" alt="" />
             </div>
         </div>
-    </section>
+    </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue'
+import { Dialog, DialogPanel } from '@headlessui/vue'
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
-const initial = {
-    opacity: 100,
-    y: 100,
-};
+const navigation = [
+    { name: 'Home', href: '#' },
+    { name: 'Projects', href: '#' },
+    { name: 'Skills', href: '#' },
+    { name: 'About', href: '#' },
+]
 
-const visible = ref(true);
+const mobileMenuOpen = ref(false)
 </script>
