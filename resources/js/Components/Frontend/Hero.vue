@@ -6,7 +6,7 @@
                     <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
                         <a href="#" class="-m-1.5 p-1.5 flex items-center">
                             <span class="sr-only">Caleb Brown</span>
-                            <img alt="Your Company" class="h-8 w-auto" src="Images/Logo.svg" />
+                            <img alt="CalebBrown" class="h-8 w-auto" src="Images/Logo.svg" />
                             <div class="pl-2 text-xl font-semibold text-white">
                                 Caleb Brown
                             </div>
@@ -25,9 +25,12 @@
                 <div class="fixed inset-0 z-50" />
                 <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-dark-secondary px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div class="flex items-center justify-between">
-                        <a href="#" class="-m-1.5 p-1.5">
-                            <span class="sr-only">Your Company</span>
-                            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+                        <a href="#" class="-m-1.5 p-1.5 flex items-center">
+                            <span class="sr-only">Caleb Brown</span>
+                            <img alt="CalebBrown" class="h-8 w-auto" src="Images/Logo.svg" />
+                            <div class="pl-2 text-xl font-semibold text-white">
+                                Caleb Brown
+                            </div>
                         </a>
                         <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
                             <span class="sr-only">Close menu</span>
@@ -38,9 +41,6 @@
                         <div class="-my-6 divide-y divide-gray-500/10">
                             <div class="space-y-2 py-6">
                                 <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50">{{ item.name }}</a>
-                            </div>
-                            <div class="py-6">
-                                <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50">Log in</a>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@
                         <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
                             <div class="hidden sm:mb-10 sm:flex">
                                 <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-white ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                                    Anim aute id magna aliqua ad ad non deserunt sunt. <a href="#" class="whitespace-nowrap font-semibold text-accent"><span class="absolute inset-0" aria-hidden="true" />Read more <span aria-hidden="true">&rarr;</span></a>
+                                    If you would like to see some of my videography! <a href="#" class="whitespace-nowrap font-semibold text-accent"><span class="absolute inset-0" aria-hidden="true" />Click Here<span aria-hidden="true">&rarr;</span></a>
                                 </div>
                             </div>
                             <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">I Build & Design <br />
