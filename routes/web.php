@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SkillController;
@@ -20,6 +21,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', [WelcomeController::class, 'welcome'])->name('welcome');
+Route::get('/about', [AboutController::class, 'about'])->name('about');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {

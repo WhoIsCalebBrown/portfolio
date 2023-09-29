@@ -92,7 +92,7 @@ const navigation = [
     { name: 'Home', href: '#' },
     { name: 'Projects', href: '#' },
     { name: 'Skills', href: '#' },
-    { name: 'About', href: '#' },
+    { name: 'About', href: '/about' },
 ]
 
 const mobileMenuOpen = ref(false)
